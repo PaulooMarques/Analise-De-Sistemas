@@ -1,0 +1,12 @@
+Linguagem utilizada:
+Java: Linguagem de programação orientada a objetos, focada em código seguro e robusto.
+
+Requisitos do programa:
+
+RF001: O sistema deve listar as opções de voto numeradas ao iniciar a execução.
+RF002: O sistema deve aceitar apenas entradas numéricas inteiras dentro do intervalo válido (1–N), registrar o voto correspondente e exibir mensagens de erro para entradas inválidas.
+RF003: O sistema deve encerrar a votação quando o usuário digitar 0 e, ao final, exibir o total de votos por opção.
+
+Principais dififuldades de migração:
+
+diferentes na sintaxe dos programas, sendo o java mais verboso, estruturas que não existem em Python como: do-while e switch-case

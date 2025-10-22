@@ -1,0 +1,52 @@
+1. Requisitos do Sistema
+Requisitos Funcionais
+RF01 - Adicionar Funcionário: Cadastrar novos funcionários com nome, cargo e salário. Validar limite de 100 cadastros e confirmar operação.
+
+RF02 - Listar Funcionários: Exibir todos cadastrados com número, nome, cargo e salário formatado.
+
+RF03 - Buscar Funcionário: Buscar por nome (case-insensitive), exibir cargo e salário ou informar se não encontrado.
+
+RF04 - Menu Interativo: Apresentar menu numerado com opções e permitir navegação até sair (opção 0).
+
+Requisitos Não Funcionais
+
+Capacidade: Até 100 funcionários (configurável em Python)
+Usabilidade: Interface clara com feedback de operações
+Portabilidade: C (compilador padrão) / Python 3.6+
+Manutenibilidade: Código documentado com responsabilidades bem definidas
+
+2. Dificuldades na Migração
+
+2.1 Gestão de Memória
+O código em C usa array fixo `Funcionario funcionarios[MAX]` com controle manual de índices. Precisei adaptar para lista dinâmica em Python, que cresce automaticamente, eliminando a necessidade de controlar manualmente o índice `total`.
+
+2.2 Leitura de Entrada
+Foi desafiador entender a lógica de limpeza de buffer do código original. O `fgets()` e `scanf()` em C exigem remoção manual do `\n` com `strcspn()` e uso de `getchar()` para limpar buffer. Em Python, simplifiquei usando apenas `input()` que já faz isso automaticamente.
+
+2.3 Mudança de Paradigma
+O código fornecido é procedural com variáveis globais. Decidi migrar para orientação a objetos criando as classes `Funcionario` e `SistemaFuncionarios`, o que tornou o código mais organizado e fácil de expandir no futuro.
+
+2.4 Tratamento de Erros
+O código original não tinha validações robustas. Adicionei blocos `try-except` para capturar erros de conversão (`ValueError`) e validar entradas vazias ou salários negativos, tornando o sistema mais confiável.
+
+2.5 Comparação de Strings
+Precisei entender que `strcmp()` retorna 0 quando strings são iguais (não é intuitivo). Em Python, substituí por operador `==` e adicionei `.lower()` para fazer busca case-insensitive, melhorando a experiência do usuário.
+
+2.6 Encoding
+O código fornecido apresentava caracteres estranhos (Ã¡, Ã§) nos acentos. Descobri que era problema de encoding. Python 3 usa UTF-8 por padrão, então os acentos funcionam corretamente sem precisar de configuração adicional.
+
+3. Conclusão
+
+A migração mostrou que Python é mais adequado para este tipo de sistema:
+- Código mais limpo e legível
+- Desenvolvimento mais rápido
+- Melhor tratamento de erros
+- Sem problemas de encoding
+
+4. Conclusão
+Durante a migração do código fornecido pelo professor, percebi que Python facilitou bastante o desenvolvimento. 
+O código ficou mais simples de entender e escrever, principalmente por não precisar me preocupar com gerenciamento de memória.
+
+A maior vantagem foi poder usar orientação a objetos, que aprendi nas aulas teóricas e consegui aplicar na prática. Também achei mais fácil adicionar validações e tratamento de erros em Python.
+Entendi que C é uma linguagem mais "baixo nível" que exige mais atenção aos detalhes, enquanto Python abstrai muita coisa, permitindo focar mais na lógica do programa. 
+Para este tipo de sistema simples de cadastro, Python se mostrou mais adequado.

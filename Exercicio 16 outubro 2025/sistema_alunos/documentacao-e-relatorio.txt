@@ -1,0 +1,12 @@
+Linguagem utilizada:
+Java: Linguagem de programação orientada a objetos, focada em código seguro e robusto.
+
+Requisitos do programa:
+
+RF001: cadastrar alunos com suas notas finais no sistema
+RF002: listar alunos e notas cadastrados
+RF003: buscar aluno e nota por nome do aluno
+
+Principais dififuldades de migração:
+
+diferentes na sintaxe dos programas, sendo o java mais verboso, estruturas que não existem em Python como: do-while e switch-case
