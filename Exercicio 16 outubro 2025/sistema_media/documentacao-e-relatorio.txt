@@ -1,0 +1,15 @@
+Linguagem utilizada:
+Cobol: Linguagem de programação focada no processamento de dados e transações comerciais, 
+muito ulilizado em sistemas de bancos, principalmente os mais antigos
+
+Requisitos do programa:
+
+RF001: cadastrar alunos com suas notas
+RF002: calcular media da turma
+RF003: exibir relatório da turma (alunos, notas e média da turma)
+
+Principais dififuldades de migração:
+
+diferença na sintaxe dos programas, cobol tem uma estrutura fixa sem ser muito dinâmico,
+cobol foi feito para sistemas de caluculos financeiros e usa o numeros decimais enquanto python
+usa float podendo causar pequenas imprecisões.
