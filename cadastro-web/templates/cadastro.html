@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro de Usuário</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+
+<body>
+  <section class="container">
+
+    <div class="esquerda">
+      <h1>Biblioteca dahora</h1>
+    </div>
+    <div class="direita">
+      <h2>Cadastre-se</h2>
+      <form id="formCadastro" method="POST" action="/cadastrar">
+
+        <label>Nome:
+          <input class="nome" type="text" name="nome" placeholder="preecha seu nome">
+        </label>
+
+        <label>Email:
+          <input class="email" type="text" name="email" placeholder="exemplo@gmail.com">
+        </label>
+
+        <label>Telefone:
+          <input class="telefone" type="text" name="telefone" placeholder="(99) 99999-9999">
+        </label>
+
+        <label>CPF:
+          <input class="cpf" type="text" name="cpf" placeholder="999.999.999-99">
+        </label>
+
+        <label>nascimento:
+          <input class="nascimento" type="date" name="nascimento" value="2000-01-01">
+        </label>
+
+        <label>Senha:
+          <input class="senha" type="password" placeholder="senhaboa" name="senha">
+        </label>
+
+        <input id="submit" type="submit" value="enviar">
+
+        <p>Já tem cadastro? Faça o <a href="/login"><strong>login</strong></a></p>
+
+      </form>
+
+      <ul class="avisos"></ul>
+    </div>
+  </section>
+  <script src="{{url_for('static', filename='script.js')}}"></script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+:root {
+  --pattern: #fff;
+  --pattern-2: #000;
+
+  --bg: #9DCDD4;
+  --bg-2: #579ed4;
+  --border: #57D4B9;
+  --erro: #f00;
+  --sucess: #57D48E;
+}
+
+body {
+  background-color: var(--border);
+}
+
+.confirmacao {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.confirmacao a {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #222;
+  background-color: #e2e2e2;
+  border: 1px solid #000;
+  padding: 10px 15px;
+  border-radius: 5px;
+}

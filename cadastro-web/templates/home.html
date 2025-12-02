@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style-home.css')}}">
+</head>
+<body>
+    <h1>Bem Vindo, {{ nome }}!</h1>
+    <h2>Catálogo</h2>
+    <section class="catalogo">
+        <div class="livro-box">
+            <h2>Pequeno Príncipe</h2>
+            <div class="capa">
+                <img src="../static/imgs/capas/capa-1.jpeg" alt="">
+            </div>
+            <div class="infos">
+                <p>Autor: Antoine de Saint-Exupéry</p>
+                <p>Ano de lançamento: 1965</p>
+                <p>Gênero: Infanto-juvenil</p>
+            </div>
+        </div>
+        <div class="livro-box">
+            <h2>A Metamorfose</h2>
+            <div class="capa">
+                <img src="../static/imgs/capas/capa-2.jpeg" alt="">
+            </div>
+            <div class="infos">
+                <p>autor: Franz Kafka</p>
+                <p>ano de lançamento: 1915</p>
+                <p>Gênero: Novela</p>
+            </div>
+        </div>
+        <div class="livro-box">
+            <h2>1984</h2>
+            <div class="capa"><img src="../static/imgs/capas/capa-3.jpeg" alt=""></div>
+            <div class="infos">
+                <p>autor:  George Orwell</p>
+                <p>ano de lançamento: 1949</p>
+                <p>Gênero: Ficção cientifica</p>
+            </div>
+        </div>
+    </section>
+    <a href="/logout">sair</a>
+</body>
+</html>
